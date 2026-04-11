@@ -3,7 +3,6 @@ export ZSHCONFIG="$HOME/.config/zsh"
 
 source $ZSHCONFIG/env.zsh          # 加载密钥
 source $ZSHCONFIG/system.zsh       # 环境变量
-source $ZSHCONFIG/omz.zsh          # omz
 
 # 自动加载当前目录下lib中的所有.zsh脚本
 for script in $ZSHCONFIG/lib/*.zsh; do
