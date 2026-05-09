@@ -1,7 +1,7 @@
 # 更换APT镜像源
 function aptsources() {
   if [[ ! -f /etc/apt/sources.list.bak ]]; then
-    cp /etc/apt/sources.list /etc/apt/sources.list.bak
+    sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
     echo "已创建 sources.list.bak 备份文件"
   fi
 
