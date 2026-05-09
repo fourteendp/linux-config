@@ -1,9 +1,19 @@
 {
 echo "========================================"
+echo "DNS 设置 ..."
+cat > /etc/resolv.conf << EOF
+nameserver 223.5.5.5
+nameserver 223.6.6.6
+nameserver 8.8.8.8
+EOF
+echo "✅ DNS 设置完成"
+
+echo "========================================"
 echo "正在更新软件源 ..."
 apt update -y
 echo "✅ 软件源更新完成"
 
+echo "========================================"
 echo "安装必要工具 ..."
 apt install -y git zsh
 echo "✅ 必要工具安装完成"
@@ -35,6 +45,19 @@ fi
 echo "========================================"
 echo "设置 admin 用户 zsh ..."
 touch /home/admin/.zshrc
+cat > /home/admin/.zshrc << EOF
+# 加载配置文件
+if [[ -f "\$HOME/.config/init.zsh" ]]; then
+  source "\$HOME/.config/init.zsh"
+fi
+
+# 自动克隆配置仓库
+if [[ ! -d "\$HOME/.config" ]]; then
+  echo "正在克隆 linux-config 仓库到 .config 目录 ..."
+  git clone https://github.com/fourteendp/linux-config.git "\$HOME/.config"
+  echo "✅ linux-config 仓库克隆完成"
+fi
+EOF
 chown admin:admin /home/admin/.zshrc
 echo "✅ admin 用户 zsh 设置完成"
 
