@@ -1,9 +1,10 @@
-sudo -i
+# 更新软件源
+sudo apt update -y
 # 下载工具
-apt install curl wget git axel -y
+sudo apt install curl wget git axel -y
 # 必要工具
-apt install eza zoxide fzf rsync unzip ranger -y
+sudo apt install eza zoxide fzf rsync unzip ranger -y
 # 终端美化
-apt install starship -y
+sudo apt install starship -y
 # 编辑器
-apt install neovim -y
+sudo apt install neovim -y
