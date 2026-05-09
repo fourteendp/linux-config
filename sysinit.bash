@@ -1,8 +1,12 @@
 #!/bin/bash
 echo "========================================"
 echo "正在更新软件源 ..."
-apt update -y > /dev/null 2>&1
+apt update -y
 echo "✅ 软件源更新完成"
+
+echo "安装必要工具 ..."
+apt install -y git zsh
+echo "✅ 必要工具安装完成"
 
 echo "========================================"
 echo "正在设置 root 密码为 root ..."
@@ -29,11 +33,10 @@ else
 fi
 
 echo "========================================"
-echo "正在安装 zsh ..."
-apt install -y zsh > /dev/null 2>&1
+echo "设置 admin 用户 zsh ..."
 touch /home/admin/.zshrc
 chown admin:admin /home/admin/.zshrc
-echo "✅ zsh 安装完成"
+echo "✅ admin 用户 zsh 设置完成"
 
 echo "========================================"
 echo "正在设置 admin 默认 Shell 为 zsh ..."
