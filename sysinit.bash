@@ -1,12 +1,37 @@
 {
 echo "========================================"
-echo "DNS 设置 ..."
+echo "WSL 设置 ..."
+cat > /etc/wsl.conf << EOF
+[boot]
+systemd=false
+[network]
+generateResolvConf = false
+EOF
+echo "✅ WSL 设置完成"
+
+echo "========================================"
+echo "网络设置 ..."
 cat > /etc/resolv.conf << EOF
 nameserver 223.5.5.5
 nameserver 223.6.6.6
 nameserver 8.8.8.8
 EOF
-echo "✅ DNS 设置完成"
+echo "✅ 网络设置完成"
+
+echo "========================================"
+echo "设置镜像源 ..."
+cat > /etc/apt/sources.list << EOF
+# 默认注释了源码仓库，如有需要可自行取消注释
+deb http://mirrors.ustc.edu.cn/debian trixie main contrib non-free non-free-firmware
+# deb-src http://mirrors.ustc.edu.cn/debian trixie main contrib non-free non-free-firmware
+deb http://mirrors.ustc.edu.cn/debian trixie-updates main contrib non-free non-free-firmware
+# deb-src http://mirrors.ustc.edu.cn/debian trixie-updates main contrib non-free non-free-firmware
+
+# backports 软件源，请按需启用
+# deb http://mirrors.ustc.edu.cn/debian trixie-backports main contrib non-free non-free-firmware
+# deb-src http://mirrors.ustc.edu.cn/debian trixie-backports main contrib non-free non-free-firmware
+EOF
+echo "✅ 镜像源设置完成"
 
 echo "========================================"
 echo "正在更新软件源 ..."
