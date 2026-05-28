@@ -71,17 +71,19 @@ echo "========================================"
 echo "设置 admin 用户 zsh ..."
 touch /home/admin/.zshrc
 cat > /home/admin/.zshrc << EOF
-# 加载配置文件
-if [[ -f "\$HOME/.config/init.zsh" ]]; then
-  source "\$HOME/.config/init.zsh"
-fi
-
-# 自动克隆配置仓库
 if [[ ! -d "\$HOME/.config" ]]; then
   echo "正在克隆 linux-config 仓库到 .config 目录 ..."
   git clone https://github.com/fourteendp/linux-config.git "\$HOME/.config"
   echo "✅ linux-config 仓库克隆完成"
 fi
+
+# if [[ -f "\$HOME/.config/install-packages.zsh" ]]; then
+#   source "\$HOME/.config/install-packages.zsh"
+# fi
+
+# if [[ -f "\$HOME/.config/init.zsh" ]]; then
+#  source "\$HOME/.config/init.zsh"
+# fi
 EOF
 chown admin:admin /home/admin/.zshrc
 echo "✅ admin 用户 zsh 设置完成"

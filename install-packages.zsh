@@ -4,7 +4,7 @@
 set -e
 
 PACKAGES=(
-    zsh git curl wget eza zoxide fzf starship neovim axel rsync openssh-server unzip ranger
+    zsh git curl wget eza zoxide fzf starship neovim axel rsync unzip ranger
 )
 
 echo "========================================"
