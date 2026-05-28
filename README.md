@@ -1,10 +1,14 @@
-sudo apt install zsh git curl wget eza zoxide fzf starship neovim axel rsync openssh-server unzip ranger
-
-# 安装
+# 中文环境
+```bash
 apt install locales
-# 配置
-sudo dpkg-reconfigure locales
-
+dpkg-reconfigure locales
+```
+# 编译环境
+```bash
 apt install build-essential
+```
+
+
+
 
 curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh

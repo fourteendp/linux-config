@@ -77,13 +77,7 @@ if [[ ! -d "\$HOME/.config" ]]; then
   echo "✅ linux-config 仓库克隆完成"
 fi
 
-# if [[ -f "\$HOME/.config/install-packages.zsh" ]]; then
-#   source "\$HOME/.config/install-packages.zsh"
-# fi
-
-# if [[ -f "\$HOME/.config/init.zsh" ]]; then
-#  source "\$HOME/.config/init.zsh"
-# fi
+source "\$HOME/.config/init.zsh"
 EOF
 chown admin:admin /home/admin/.zshrc
 echo "✅ admin 用户 zsh 设置完成"
