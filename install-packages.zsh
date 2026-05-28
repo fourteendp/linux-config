@@ -1,6 +1,4 @@
 #!/usr/bin/env zsh
-# 自动检测并安装 userinit.zsh 中列出的软件包
-
 set -e
 
 PACKAGES=(

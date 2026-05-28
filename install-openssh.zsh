@@ -1,1 +1,1 @@
-# openshh 安装和设置
+#!/usr/bin/env zsh

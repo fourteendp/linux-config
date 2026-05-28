@@ -7,8 +7,17 @@ dpkg-reconfigure locales
 ```bash
 apt install build-essential
 ```
+# 必备包
+```bash
+source "$HOME/.config/install-packages.zsh"
+```
+# ssh
+```bash
+source "$HOME/.config/install-openssh.zsh"
+```
 
+# zimfw
+```bash
+source "$HOME/.config/install-zimfw.zsh"
 
-
-
-curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
+```
