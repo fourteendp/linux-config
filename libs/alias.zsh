@@ -1,8 +1,6 @@
 # 重新加载zsh配置
 alias zshr="source ~/.zshrc"
 
-
-
 if (($+commands[eza] )); then
   alias l='eza --icons=auto --git'
   alias la='eza -a --icons=auto --git'

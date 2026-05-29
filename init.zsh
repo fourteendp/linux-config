@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 export CONFIGDIR="$HOME/.config"
 export SOURCESDIR="$CONFIGDIR/sources"
+export SCRIPTDIR="$CONFIGDIR/script"
 
 source $CONFIGDIR/ziminit.zsh           # zimfw
 source $CONFIGDIR/libs/env.zsh          # 加载密钥
