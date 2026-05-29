@@ -13,6 +13,10 @@ dpkg-reconfigure locales
 ```bash
 apt install build-essential
 ```
+## 版本管理器
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://scripts.vmr.dpdns.org | sh
+```
 
 ## 一、基础系统与环境工具
 
