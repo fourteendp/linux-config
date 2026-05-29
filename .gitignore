@@ -1,6 +1,6 @@
-systemd
+systemd/
 *.old
 *.latest_version
-pip
-ssh
-modules
+pip/
+ssh/
+modules/
