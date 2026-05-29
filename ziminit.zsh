@@ -86,7 +86,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 # ------------------
 
 ZIM_HOME=${ZDOTDIR:-${HOME}}/.config/zim
-ZIM_CONFIG_FILE=${ZDOTDIR:-${HOME}}/.config/zimrc.zsh
+ZIM_CONFIG_FILE=${ZDOTDIR:-${HOME}}/.config/libs/zimrc.zsh
 # 如果缺失则下载zimfw插件管理器。
 if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
   if (( ${+commands[curl]} )); then
