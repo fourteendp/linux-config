@@ -1,5 +1,6 @@
 # starship
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 
 if [ -z "$(git config --global user.email)" ]; then
     if [ ! -z "$GIT_EMAIL" ]; then
