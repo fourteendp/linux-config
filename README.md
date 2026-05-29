@@ -9,15 +9,9 @@ apt install build-essential
 ```
 # 必备包
 ```bash
-source "$HOME/.config/install-packages.zsh"
+source "$HOME/.config/script/install-packages.zsh"
 ```
 # ssh
 ```bash
-source "$HOME/.config/install-openssh.zsh"
-```
-
-# zimfw
-```bash
-source "$HOME/.config/install-zimfw.zsh"
-
+source "$HOME/.config/script/install-openssh.zsh"
 ```

@@ -20,6 +20,11 @@ echo "✅ 网络设置完成"
 
 echo "========================================"
 echo "设置镜像源 ..."
+if [ ! -f /etc/apt/sources.list.bak ]; then
+    echo "正在备份镜像源 ..."
+    cp /etc/apt/sources.list /etc/apt/sources.list.bak
+    echo "✅ 镜像源备份完成"
+fi
 cat > /etc/apt/sources.list << EOF
 # 默认注释了源码仓库，如有需要可自行取消注释
 deb http://mirrors.ustc.edu.cn/debian trixie main contrib non-free non-free-firmware
@@ -72,9 +77,7 @@ echo "设置 admin 用户 zsh ..."
 touch /home/admin/.zshrc
 cat > /home/admin/.zshrc << EOF
 if [[ ! -d "\$HOME/.config" ]]; then
-  echo "正在克隆 linux-config 仓库到 .config 目录 ..."
   git clone https://github.com/fourteendp/linux-config.git "\$HOME/.config"
-  echo "✅ linux-config 仓库克隆完成"
 fi
 
 source "\$HOME/.config/init.zsh"
