@@ -83,6 +83,11 @@ fi
 source "\$HOME/.config/init.zsh"
 EOF
 chown admin:admin /home/admin/.zshrc
+touch /home/admin/.zshenv
+cat > /home/admin/.zshenv << EOF
+skip_global_compinit=1
+EOF
+chown admin:admin /home/admin/.zshenv
 echo "✅ admin 用户 zsh 设置完成"
 
 echo "========================================"

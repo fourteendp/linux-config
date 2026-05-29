@@ -2,3 +2,5 @@ systemd
 *.old
 *.latest_version
 pip
+ssh
+modules
