@@ -16,6 +16,7 @@ nameserver 223.5.5.5
 nameserver 223.6.6.6
 nameserver 8.8.8.8
 EOF
+chattr +i /etc/resolv.conf
 echo "✅ 网络设置完成"
 
 echo "========================================"
